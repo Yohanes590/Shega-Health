@@ -38,7 +38,7 @@ The landing page is designed to warmly welcome users and clearly communicate the
 - Clear calls to action for login and payment  
 - Responsive design for both desktop and mobile  
 
-![Landing Page Screenshot](/Landing%20Page.jpg)
+![Landing Page Screenshot](/public/Landing%20Page.jpg)
 
 The user dashboard design is currently under development and will provide personalized health insights and card management.
 
