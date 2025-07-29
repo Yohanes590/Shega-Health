@@ -1,12 +1,10 @@
 "use client"
 import Link from "next/link"
-import { useUser } from "@clerk/nextjs"
 export default function HomePage() {
-      const { user } = useUser()
       return <>
             <div className="home-cards ml-[400px] pt-[150px]">
                   <div className="user-name-display">
-                        <p className="text-[24px]">Welcome back, {user?.fullName} 👋</p>
+                        <p className="text-[24px]">Welcome back, jo 👋</p>
                         <p>Here&apos;s your health summary</p>
                   </div>
                   <div className="flex-sections  flex flex-wrap pt-[20px] gap-5">

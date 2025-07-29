@@ -1,4 +1,3 @@
-import { UserButton } from "@clerk/nextjs"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
       return <>
              <div className="side-nav-bar bg-[var(--pri_color)] h-screen w-[350px] pt-[40px] fixed">
@@ -17,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             </div>
             <div className="fixed right-[30px] mt-[20px] ">
-                  <UserButton/>
             </div>
       {children}
       </>
