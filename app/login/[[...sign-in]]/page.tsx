@@ -8,6 +8,6 @@ export default function Login() {
             afterSignInUrl="/dashboard/home" 
             />
             </div>
-            sds
+            
       </>
 }
