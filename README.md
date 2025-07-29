@@ -6,6 +6,16 @@ Shega Health is a simple but powerful healthcare app demo built for the Fayda Ha
 
 ---
 
+## Tech Stack
+
+- **Frontend:** Next.js (React framework) with Tailwind CSS  
+- **Authentication:** Clerk.dev  
+- **Payment Integration:** Chapa API (local bank payment gateway)  
+- **State Management:** React hooks (useState, useEffect)  
+- **Deployment:** (Add your deployment platform if any, e.g., Vercel)  
+
+---
+
 ## Features Completed
 
 - **User Authentication with Clerk:**  
@@ -17,6 +27,20 @@ Shega Health is a simple but powerful healthcare app demo built for the Fayda Ha
 - **Core Pages:**  
   - **Home:** Welcomes logged-in users with personalized greetings and a health summary.  
   - **Card Info:** Displays patient card status and demo card details (e.g., card number, diagnosis) with clear calls to action if verification/payment is needed.
+
+---
+
+## Landing Page Design
+
+The landing page is designed to warmly welcome users and clearly communicate the purpose of Shega Health. It features:
+
+- A clean, modern look with brand colors  
+- Clear calls to action for login and payment  
+- Responsive design for both desktop and mobile  
+
+![Landing Page Screenshot](/Landing%20Page.jpg)
+
+The user dashboard design is currently under development and will provide personalized health insights and card management.
 
 ---
 
@@ -37,25 +61,9 @@ Shega Health is a simple but powerful healthcare app demo built for the Fayda Ha
 
 ---
 
-## How to Run
+## How to Run Locally
 
 1. Clone the repository.  
-2. Install dependencies with `npm install` or `yarn`.  
-3. Configure your environment variables for Clerk and Chapa payment API keys.  
-4. Run the app locally with `npm run dev` or `yarn dev`.  
-5. Navigate to `/login` to authenticate via Clerk.  
-6. Use the payment button on Card Info to test payment flow.
-
----
-
-## Final Notes
-
-This project was built solo under a tight deadline for the Fayda Hackathon. The focus was on delivering a working MVP with solid user authentication and payment integration.
-
-Thank you for reviewing this submission — feedback and support are greatly appreciated!
-
----
-
-*Developer:* [Your Name]  
-*Email:* your.email@example.com  
-*GitHub:* https://github.com/yourusername
+2. Install dependencies with:  
+   ```bash
+   npm install
