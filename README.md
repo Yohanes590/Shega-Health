@@ -1,111 +1,35 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shega Health – Digital Health Card Platform
 
-## Getting Started
+## Overview
+Shega Health is a digital health solution enabling patients to easily access and manage their medical records, lab results, prescriptions, and health card information.  
+Our platform integrates **Telebirr payments** for card issuance and aims to simplify healthcare access in Ethiopia.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# Shega Health
-
-**Shega Health** is a next-generation digital health portal that empowers patients to securely access, manage, and share their medical information while connecting directly with healthcare providers.  
-
-A unique highlight of our solution is **Telebirr-powered Digital Health Card issuance** – allowing patients to instantly obtain a secure, QR-enabled health card for seamless hospital check-ins and emergency access.
-
----
-
-## Contributors
-- **Yohanes Mulugeta** – Fullstack Developer (Lead)
-
----
-
-## Problem Statement
-Healthcare information in Ethiopia is often fragmented:
-- Patients carry paper-based records, risking data loss or misplacement.
-- Hospitals face challenges in quick patient identification.
-- Emergency responders lack access to critical patient info such as allergies or blood group.
-
----
-
-## Planned Solution
-- **Unified Patient Dashboard**: Medical history, lab results, prescriptions, and emergency contacts in one secure portal.
-- **Digital Health Card with Telebirr Payment**: Patients pay a small fee via Telebirr to receive a verified, QR-enabled health card.
-- **Quick Hospital Integration**: Doctors and hospital staff can verify patients via card scanning.
-- **Emergency Information Mode**: Rapid access to life-saving patient data during critical events.
-
----
-
-## Key Features
-1. **Patient Dashboard**
-   - Home overview with recent medical activity
-   - Lab results, prescriptions, and emergency info
-2. **Digital Health Card**
-   - One-click purchase via **Telebirr**
-   - Instant QR code generation for hospital use
-   - Downloadable PDF card
-3. **Secure Authentication**
-   - Powered by Clerk for seamless login
-4. **Mock Telebirr Payment Flow** *(for hackathon demo)*
-   - Quick payment confirmation simulation to showcase integration potential
-
----
-
-## Expected Outcome
-- Reduce delays in hospital check-ins by enabling digital patient verification.
-- Provide patients with one-click access to personal medical data.
-- Introduce a scalable health identity solution for Ethiopia’s growing digital health ecosystem.
-
----
+## Key Features (Phase 1)
+- **Digital Health Card**: Secure patient health card with unique QR code.  
+- **Telebirr Payment Integration**: Quick and easy payment for card activation.  
+- **Medical Records**: Centralized storage and easy retrieval of patient records.  
+- **Lab Results & Prescriptions**: Quick access to lab results and prescriptions.  
+- **Secure Authentication**: Fayda integration for secure patient login.
 
 ## Tech Stack
-- **Frontend**: Next.js (App Router), TailwindCSS, ShadCN UI
-- **Authentication**: Clerk
-- **Payments**: Telebirr (mock integration for hackathon demo)
-- **Database**: (Planned) MongoDB
-- **Deployment**: Vercel
+- **Frontend**: Next.js, TailwindCSS  
+- **Backend**: Node.js/Express  
+- **Database**: MongoDB  
+- **Integration**: Fayda ID, Telebirr API
+
+## Goal
+To create a **reliable and accessible digital health platform** empowering patients and health providers with **secure, fast, and paperless solutions**.
 
 ---
 
-## Fayda’s Role
-The portal is built with Fayda ID in mind:
-- Future integration will allow **direct patient verification via Fayda ID** for enhanced security and trust.
+### Running Locally
+1. Clone the repo:  
+   `git clone <your-repo-url>`
+2. Install dependencies:  
+   `npm install`
+3. Run the development server:  
+   `npm run dev`
 
 ---
 
-## Installation
-```bash
-git clone https://github.com/<your-username>/shega-health.git
-cd shega-health
-npm install
-npm run dev
->>>>>>> c88866b3d8fb3fc9c906f5bf84e28734d959314f
+**Developed during the Fayda Hackathon 2025 – Solo Developer Project**
