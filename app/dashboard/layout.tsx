@@ -1,7 +1,7 @@
 "use client"
 import { UserButton } from "@clerk/nextjs"
 import { usePathname } from "next/navigation"
-
+import { useUser } from "@clerk/nextjs"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() || ""
   const route = pathname.split("/")[2] || ""
@@ -13,6 +13,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const baseBtnClasses =
     "transition-all duration-400 hover:bg-[var(--sec_color)] w-[90%] text-[18px] flex pl-[20px] cursor-pointer items-center h-[50px] text-white rounded-[5px]"
   const activeBtnStyle = "bg-[#0045635e]"
+
+  const { user } = useUser()
 
   return (
     <>

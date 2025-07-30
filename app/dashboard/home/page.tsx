@@ -1,8 +1,26 @@
 "use client"
 import Link from "next/link"
 import { useUser } from "@clerk/nextjs"
+import { useEffect } from "react"
 export default function HomePage() {
   const { user } = useUser()
+  useEffect(() => {
+    if(!user) return
+  const CheckUser = async () => {
+    const sendingUserId = await fetch("/api/check-user/", {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({
+        userId:user?.id
+      })
+    })
+    const ServerResponse = await sendingUserId.json()
+    console.log(ServerResponse)
+  }
+  CheckUser()
+}, [user]) 
 
   return (
     <div className="home-cards ml-[400px] pt-[150px]">
