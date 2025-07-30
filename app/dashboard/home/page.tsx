@@ -5,7 +5,7 @@ import { useEffect } from "react"
 export default function HomePage() {
   const { user } = useUser()
   useEffect(() => {
-    if(!user) return
+    if (!user) return
   const CheckUser = async () => {
     const sendingUserId = await fetch("/api/check-user/", {
       method: "POST",
@@ -13,7 +13,8 @@ export default function HomePage() {
         "Content-Type":"application/json"
       },
       body: JSON.stringify({
-        userId:user?.id
+        userId: user?.id,
+        userEmail:user?.emailAddresses
       })
     })
     const ServerResponse = await sendingUserId.json()
