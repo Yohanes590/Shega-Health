@@ -5,7 +5,8 @@ export default function CallbackPage() {
   fetch("/api/auth/userinfo")
     .then(res => res.json())
     .then(data => console.log("User info:", data))
-    .catch(err => console.error(err));
+       .catch(err => console.error(err));
+     window.location.href="/dashboard/home"
 }, []);
 
   return <div>Fetching user data...</div>;
