@@ -16,17 +16,13 @@ Shega Health is a simple but powerful healthcare app demo built for the Fayda Ha
 
 ---
 
-## Features Completed
-
-- **User Authentication with Clerk:**  
-  Users can register and log in securely using Clerk. User information like full name is displayed on the Home page.
-
-- **Payment Integration with Local Banks:**  
-  The payment system uses a local bank gateway (via Chapa API) to enable users to buy a patient card. Payment flow is fully functional and redirects users after successful payment.
-
-- **Core Pages:**  
-  - **Home:** Welcomes logged-in users with personalized greetings and a health summary.  
-  - **Card Info:** Displays patient card status and demo card details (e.g., card number, diagnosis) with clear calls to action if verification/payment is needed.
+## Features Implemented
+- Patient Card Info (completed)
+- Medical Records (UI placeholder)
+- Lab Results (UI placeholder)
+- Appointments (UI placeholder)
+- Prescriptions (UI placeholder)
+- Emergency Info (UI placeholder)
 
 ---
 
@@ -64,6 +60,8 @@ The user dashboard design is currently under development and will provide person
 ## How to Run Locally
 
 1. Clone the repository.  
-2. Install dependencies with:  
+2. Install dependencies with:
+3. you can see the web on http://localhost:3000/
    ```bash
    npm install
+   npm run dev
