@@ -1,12 +1,9 @@
 "use client"
 import Link from "next/link"
 import { useUser } from "@clerk/nextjs"
-import { useEffect } from "react"
 export default function HomePage() {
   const { user } = useUser()
-  useEffect(() => {
-    window.localStorage.setItem("hasBoughtCard" ,"false")
-  })
+
   return (
     <div className="home-cards ml-[400px] pt-[150px]">
       <div className="user-name-display">

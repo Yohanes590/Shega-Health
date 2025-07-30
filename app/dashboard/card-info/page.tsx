@@ -6,15 +6,21 @@ export default function CardInfo() {
   const { user } = useUser()
   const [userBoughtCard, setUserBoughtCard] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [fakeCardNumber, setFakeCardNumber] = useState("")
+  const [fakeCardNumber, setFakeCardNumber] = useState<string | null>(null)
 
   useEffect(() => {
-    const bought = localStorage.getItem("hasBoughtCard")
-    setUserBoughtCard(bought === "true")
+    // Check if user bought card
+    const bought = localStorage.getItem("hasBoughtCard") === "true"
+    setUserBoughtCard(bought)
 
-    // Generate fake card number once if paid
-    if (bought === "true") {
-      setFakeCardNumber("SC-" + Math.floor(100000000000 + Math.random() * 900000000000))
+    // Generate or fetch persistent fake card number if paid
+    if (bought) {
+      let card = localStorage.getItem("fakeCardNumber")
+      if (!card) {
+        card = "SC-" + Math.floor(100000000000 + Math.random() * 900000000000)
+        localStorage.setItem("fakeCardNumber", card)
+      }
+      setFakeCardNumber(card)
     }
   }, [])
 
@@ -48,16 +54,16 @@ export default function CardInfo() {
         <>
           <div className="user-name-display pt-[150px]">
             <p className="text-[24px]">Please Verify Your Card</p>
-            <p>Follow Those Steps</p>
+            <p>Follow These Steps</p>
           </div>
-          <div className="simple-card w-[400px] mt-[40px] h-[200px] bg-white">
-            <div className="card-content pt-[20px] pl-[20px]">
-              <h1 className="font-bold text-[22px]">Patient Card Price </h1>
+          <div className="simple-card w-[400px] mt-[40px] h-[200px] bg-white rounded shadow p-5">
+            <div className="card-content">
+              <h1 className="font-bold text-[22px]">Patient Card Price</h1>
               <p>400 ETB</p>
               <button
                 disabled={loading}
                 onClick={handlePay}
-                className="mt-[20px] w-[95%] cursor-pointer text-white h-[50px] bg-green-600 disabled:opacity-50"
+                className="mt-[20px] w-[95%] cursor-pointer text-white h-[50px] bg-green-600 rounded disabled:opacity-50"
               >
                 {loading ? "Processing..." : "Pay now"}
               </button>
@@ -65,19 +71,26 @@ export default function CardInfo() {
           </div>
         </>
       ) : (
-          <>
-            <div className="main-card pt-[150px]">
-        <div className="paid-card-info  bg-white w-[400px] p-6 rounded shadow">
-          <h2 className="text-2xl font-bold mb-4">Your Patient Card</h2>
-          <p><strong>Name:</strong> {user?.fullName || "Unknown User"}</p>
-          <p><strong>Email:</strong> {user?.primaryEmailAddress?.emailAddress}</p>
-          <p><strong>Card Number:</strong> <span className="font-mono">{fakeCardNumber}</span></p>
-          <p className="mt-2 text-green-600 font-semibold">Status: Active</p>
+        <div className="main-card pt-[150px]">
+          <div className="paid-card-info bg-white w-[400px] p-6 rounded shadow">
+            <h2 className="text-2xl font-bold mb-4">Your Patient Card</h2>
+            <p>
+              <strong>Name:</strong> {user?.fullName || "Unknown User"}
+            </p>
+            <p>
+              <strong>Email:</strong> {user?.primaryEmailAddress?.emailAddress}
+            </p>
+            <p>
+              <strong>Card Number:</strong>{" "}
+              {fakeCardNumber ? (
+                <span className="font-mono">{fakeCardNumber}</span>
+              ) : (
+                <span className="text-gray-400">Generating...</span>
+              )}
+            </p>
+            <p className="mt-2 text-green-600 font-semibold">Status: Active</p>
+          </div>
         </div>
-            </div>
-        
-         </>
-        
       )}
     </div>
   )
