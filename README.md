@@ -26,6 +26,12 @@ Shega Health is a simple but powerful healthcare app demo built for the Fayda Ha
 
 ---
 
+## Team Registration
+
+- Full Name (Registered Member): Yohanes Mulugeta  
+- Email (Registered Member): jplussince34@gmail.com
+
+
 ## Landing Page Design
 
 The landing page is designed to warmly welcome users and clearly communicate the purpose of Shega Health. It features:
